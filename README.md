@@ -14,10 +14,11 @@ Modify the JBoss configuration by copying the jar file to `modules/org/camunda/b
     &lt;resource-root path="camunda-wildfly-logging-7.4.0.jar" /&gt;
   &lt;/resources&gt;
 ...
+  &lt;module name="org.slf4j" /&gt;
 &lt;/module&gt;
 </pre>
 
-Add the plugin at the end of the plugins (important!) of the camunda engine:
+Add the LoggingEventListenerPlugin at the end of the plugins (important!) of the camunda engine:
 
 <pre>
 &lt;subsystem xmlns="urn:org.camunda.bpm.jboss:1.1"&gt;

@@ -2,7 +2,7 @@ package org.camunda.bpm.application.impl.logging;
 
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.ExecutionListener;
-import org.jboss.logging.MDC;
+import org.slf4j.MDC;
 
 public class StartEventListener implements ExecutionListener {
   
