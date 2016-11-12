@@ -14,7 +14,7 @@
 	<inceptionYear>2016</inceptionYear>
 	<scm>
 		<url>https://github.com/kifj/camunda-wildfly-logging</url>
-		<connection>scm:git:https://github.com/kifj/camunda-wildfly-logging.git</connection>
+		<connection>scm:git:git@github.com:kifj/camunda-wildfly-logging.git</connection>
 		<tag>HEAD</tag>
 	</scm>
 	<licenses>
