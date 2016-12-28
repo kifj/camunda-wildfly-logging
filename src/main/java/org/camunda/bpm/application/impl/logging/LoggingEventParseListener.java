@@ -19,15 +19,17 @@ import org.camunda.bpm.engine.impl.variable.VariableDeclaration;
 public class LoggingEventParseListener implements BpmnParseListener {
   public final static ExecutionListener START_EVENT_LISTENER = new StartEventListener();
   public final static ExecutionListener END_EVENT_LISTENER = new EndEventListener();
-  
-  protected void addListenerAtEnd(ActivityImpl activity, String eventName, DelegateListener<? extends BaseDelegateExecution> listener) {
+
+  protected void addListenerAtEnd(ActivityImpl activity, String eventName,
+      DelegateListener<? extends BaseDelegateExecution> listener) {
     activity.addListener(eventName, listener);
   }
 
-  protected void addListenerAtStart(ActivityImpl activity, String eventName, DelegateListener<? extends BaseDelegateExecution> listener) {
+  protected void addListenerAtStart(ActivityImpl activity, String eventName,
+      DelegateListener<? extends BaseDelegateExecution> listener) {
     List<DelegateListener<? extends BaseDelegateExecution>> listeners = activity.getListeners(eventName);
     if (listeners.isEmpty()) {
-      activity.addListener(eventName, listener);      
+      activity.addListener(eventName, listener);
     } else {
       listeners.add(0, listener);
     }
@@ -37,7 +39,7 @@ public class LoggingEventParseListener implements BpmnParseListener {
     addListenerAtEnd(activity, ExecutionListener.EVENTNAME_END, END_EVENT_LISTENER);
   }
 
-  protected void addStartEventListener(ActivityImpl activity) {    
+  protected void addStartEventListener(ActivityImpl activity) {
     addListenerAtStart(activity, ExecutionListener.EVENTNAME_START, START_EVENT_LISTENER);
   }
 
@@ -254,5 +256,20 @@ public class LoggingEventParseListener implements BpmnParseListener {
   @Override
   public void parseBoundaryEscalationEventDefinition(Element escalationEventDefinition, boolean interrupting,
       ActivityImpl boundaryEventActivity) {
+  }
+
+  @Override
+  public void parseBoundaryConditionalEventDefinition(Element element, boolean interrupting,
+      ActivityImpl conditionalActivity) {
+  }
+
+  @Override
+  public void parseConditionalStartEventForEventSubprocess(Element element, ActivityImpl conditionalActivity,
+      boolean interrupting) {
+  }
+
+  @Override
+  public void parseIntermediateConditionalEventDefinition(Element conditionalEventDefinition,
+      ActivityImpl conditionalActivity) {
   }
 }
