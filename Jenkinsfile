@@ -9,7 +9,4 @@ node {
     sh "${mvnHome}/bin/mvn clean package"
   }
   
-  stage('Publish') {
-    sh "${mvnHome}/bin/mvn deploy site-deploy -DskipTests"
-  }
 }
