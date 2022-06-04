@@ -10,8 +10,8 @@ Modify the JBoss configuration by copying the jar file to `modules/org/camunda/b
 <pre>
 &lt;module xmlns="urn:jboss:module:1.0" name="org.camunda.bpm.wildfly.camunda-wildfly-subsystem"&gt;
   &lt;resources&gt;
-    &lt;resource-root path="camunda-wildfly-subsystem-7.4.0.jar" /&gt;
-    &lt;resource-root path="camunda-wildfly-logging-7.4.0.jar" /&gt;
+    &lt;resource-root path="camunda-wildfly-subsystem-7.17.0.jar" /&gt;
+    &lt;resource-root path="camunda-wildfly-logging-7.17.0.jar" /&gt;
   &lt;/resources&gt;
 ...
   &lt;module name="org.slf4j" /&gt;
