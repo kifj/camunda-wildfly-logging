@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.camunda.bpm.wildfly</groupId>
 		<artifactId>camunda-wildfly</artifactId>
-		<version>7.20.0</version>
+		<version>7.21.0</version>
 	</parent>
 	<artifactId>camunda-wildfly-logging</artifactId>
 	<packaging>jar</packaging>
@@ -28,8 +28,8 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<maven.compiler.target>1.8</maven.compiler.target>
-		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+		<maven.compiler.source>17</maven.compiler.source>
 	</properties>
 
 	<dependencies>
