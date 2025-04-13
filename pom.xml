@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.camunda.bpm.wildfly</groupId>
 		<artifactId>camunda-wildfly</artifactId>
-		<version>7.22.0</version>
+		<version>7.23.0</version>
 	</parent>
 	<artifactId>camunda-wildfly-logging</artifactId>
 	<packaging>jar</packaging>
@@ -62,10 +62,7 @@
 			</snapshots>
 		</repository>
 	</repositories>
-<<<<<<< Updated upstream
 
-=======
-	
 	<distributionManagement>
 		<site>
 			<id>x1-site</id>
@@ -83,5 +80,5 @@
 			<url>https://www.x1/nexus/repository/x1-snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
->>>>>>> Stashed changes
+
 </project>
